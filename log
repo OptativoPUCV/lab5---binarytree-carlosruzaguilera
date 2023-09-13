@@ -441,3 +441,9 @@ treemap.c:119:25: error: ‘mnNode’ undeclared (first use in this function); d
 treemap.c:119:25: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 345611b
+Wed 13 Sep 2023 07:48:01 AM UTC: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  17|3
+total_score: 30/70
+bdb698b

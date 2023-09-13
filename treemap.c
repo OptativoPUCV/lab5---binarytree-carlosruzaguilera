@@ -94,7 +94,8 @@ void transplant(TreeMap* tree, TreeNode* u, TreeNode* v) {
 void removeNode(TreeMap * tree, TreeNode* node) {
   if (node->left == NULL) {
       transplant(tree, node, node->right);
-
+  } else if (node->right == NULL) {
+        transplant(tree, node, node->left);
 }
 
 void eraseTreeMap(TreeMap * tree, void* key){

@@ -459,3 +459,26 @@ treemap.c:129:25: error: ‘nextNoe’ undeclared (first use in this function); 
 treemap.c:129:25: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 e81b848
+Wed 13 Sep 2023 07:54:50 AM UTC: 
+ treemap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+treemap.c: In function ‘nextTreeMap’:
+treemap.c:128:9: error: unknown type name ‘TreNode’; did you mean ‘TreeNode’?
+  128 |         TreNode *nextNode = minimum(tree->current->right);
+      |         ^~~~~~~
+      |         TreeNode
+treemap.c:128:29: error: initialization of ‘int *’ from incompatible pointer type ‘TreeNode *’ [-Werror=incompatible-pointer-types]
+  128 |         TreNode *nextNode = minimum(tree->current->right);
+      |                             ^~~~~~~
+treemap.c:129:25: error: ‘nextNote’ undeclared (first use in this function); did you mean ‘nextNode’?
+  129 |         tree->current = nextNote;
+      |                         ^~~~~~~~
+      |                         nextNode
+treemap.c:129:25: note: each undeclared identifier is reported only once for each function it appears in
+treemap.c:130:24: error: request for member ‘pair’ in something not a structure or union
+  130 |         return nextNode->pair;
+      |                        ^~
+cc1: all warnings being treated as errors
+Compilation failed
+1373a02

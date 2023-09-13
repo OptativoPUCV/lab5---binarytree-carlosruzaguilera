@@ -53,7 +53,7 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
   while (current) {
         parent = current;
         if (is_equal(tree, key, current->pair->key)) return; 
-        if (tree->lowerthan(ky, current->pair->key)) {
+        if (tree->lowerthan(y, current->pair->key)) {
             current  current->left;
         } else {
             current = current->right;

@@ -596,3 +596,9 @@ treemap.c:86:12: error: ‘TreeNode’ has no member named ‘paent’; did you 
       |            parent
 Compilation failed
 1ce4174
+Wed 13 Sep 2023 08:11:44 AM UTC: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  26|1
+total_score: 55/70
+d7dafba

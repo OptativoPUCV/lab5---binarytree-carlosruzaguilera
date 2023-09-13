@@ -83,7 +83,7 @@ void transplant(TreeMap* tree, TreeNode* u, TreeNode* v) {
     if (u->parent == NULL) {
         tree->root = v;
     } else if (u == u->parent->left) {
-        u->paent->left = v;
+        u->parent->left = v;
     } else {
         u->parent->right = v;
     }

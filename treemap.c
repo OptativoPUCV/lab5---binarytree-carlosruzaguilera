@@ -92,9 +92,9 @@ void transplant(TreeMap* tree, TreeNode* u, TreeNode* v) {
 }
 
 void removeNode(TreeMap * tree, TreeNode* node) {
-  if (node->left == NULL) {
-      transplant(tree, node, node->right);
-  } else if (node->right == NULL) {
+    if (node->left == NULL) {
+        transplant(tree, node, node->right);
+    } else if (node->right == NULL) {
         transplant(tree, node, node->left);
     } else {
         TreeNode* y = minimum(node->right);
@@ -103,6 +103,11 @@ void removeNode(TreeMap * tree, TreeNode* node) {
             y->right = node->right;
             y->right->parent = y;
         }
+        transplant(tree, node, y);
+        y->left = node->left;
+        y->left->parent = y;
+    }
+    free(node);
 }
 
 void eraseTreeMap(TreeMap * tree, void* key){

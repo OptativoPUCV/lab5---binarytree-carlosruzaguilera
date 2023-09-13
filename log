@@ -537,3 +537,19 @@ treemap.c:113:13: error: unused variable ‘ub_node’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 f4377e4
+Wed 13 Sep 2023 08:07:20 AM UTC: 
+ treemap.c | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+In file included from test.c:4:
+treemap.c: In function ‘upperBound’:
+treemap.c:120:23: error: ‘curent’ undeclared (first use in this function); did you mean ‘current’?
+  120 |             current = curent->left;
+      |                       ^~~~~~
+      |                       current
+treemap.c:120:23: note: each undeclared identifier is reported only once for each function it appears in
+treemap.c:113:15: error: variable ‘ub_node’ set but not used [-Werror=unused-but-set-variable]
+  113 |     TreeNode *ub_node = NULL;
+      |               ^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+9dabbc5

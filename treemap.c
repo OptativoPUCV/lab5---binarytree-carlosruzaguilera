@@ -79,6 +79,19 @@ TreeNode * minimum(TreeNode * x) {
 }
 
 
+void transplant(TreeMap* tree, TreeNode* u, TreeNode* v) {
+    if (u->parent == NULL) {
+        tree->root = v;
+    } else if (u == u->parent->left) {
+        u->paent->left = v;
+    } else {
+        u->parent->right = v;
+    }
+    if (v != NULL) {
+        v->parent = u->parent;
+    }
+}
+
 void removeNode(TreeMap * tree, TreeNode* node) {
 
 }

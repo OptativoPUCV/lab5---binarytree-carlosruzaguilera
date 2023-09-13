@@ -114,10 +114,10 @@ Pair* upperBound(TreeMap* tree, void* key) {
     TreeNode *current = tree->root;
     while (current) {
         if (is_equal(tree, key, current->pair->key)) {
-            return current->pair;
+            return current->par;
         } else if (tree->lower_than(key, current->pair->key)) {
             ub_node = current;
-            current = curent->left;
+            current = current->left;
         } else {
             current = current->right;
         }

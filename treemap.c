@@ -123,5 +123,12 @@ Pair * firstTreeMap(TreeMap * tree) {
 }
 
 Pair * nextTreeMap(TreeMap * tree) {
+    if (!tree->current) return NULL;
+    if (tree->current->right) {
+        TreeNode *nextNode = minimum(tree->current->right);
+        tree->current = nextNoe;
+        return nextNode->pair;
+    }
+
     return NULL;
 }

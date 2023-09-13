@@ -126,7 +126,7 @@ Pair * nextTreeMap(TreeMap * tree) {
     if (!tree->current) return NULL;
     if (tree->current->right) {
         TreeNode *nextNode = minimum(tree->current->right);
-        tree->current = nextNote;
+        tree->current = nextNode;
         return nextNode->pair;
     }
 

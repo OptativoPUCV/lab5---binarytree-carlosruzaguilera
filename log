@@ -25,3 +25,17 @@ Wed 13 Sep 2023 07:32:08 AM UTC:
  tests:  1|8
 total_score: 0/70
 1f23440
+Wed 13 Sep 2023 07:32:45 AM UTC: 
+ treemap.c | 3 +++
+ 1 file changed, 3 insertions(+)
+In file included from test.c:4:
+treemap.c: In function ‘createTreeMap’:
+treemap.c:43:10: error: ‘TreeMap’ has no member named ‘curent’; did you mean ‘current’?
+   43 |     map->curent = NULL
+      |          ^~~~~~
+      |          current
+treemap.c:44:5: error: expected ‘;’ before ‘map’
+   44 |     map->lower_than = lt;
+      |     ^~~
+Compilation failed
+ceeb953

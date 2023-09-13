@@ -98,3 +98,35 @@ test.c:503:5: error: ‘main’ defined but not used [-Werror=unused-function]
 cc1: all warnings being treated as errors
 Compilation failed
 ae6ad0c
+Wed 13 Sep 2023 07:36:56 AM UTC: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+treemap.c: In function ‘searchTreeMap’:
+treemap.c:79:45: error: ‘Pair’ has no member named ‘ke’; did you mean ‘key’?
+   79 |         if (is_equal(tree, key, node->pair->ke)) {
+      |                                             ^~
+      |                                             key
+treemap.c:82:47: error: ‘pair’ undeclared (first use in this function); did you mean ‘Pair’?
+   82 |         } else if (tree->lower_than(key, node>pair->key)) {
+      |                                               ^~~~
+      |                                               Pair
+treemap.c:82:47: note: each undeclared identifier is reported only once for each function it appears in
+treemap.c:83:13: error: ‘ode’ undeclared (first use in this function); did you mean ‘node’?
+   83 |             ode = node->left;
+      |             ^~~
+      |             node
+test.c:503:5: error: ‘main’ is normally a non-static function [-Werror=main]
+  503 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+test.c:606:1: error: expected declaration or statement at end of input
+  606 | }
+      | ^
+test.c:607: error: control reaches end of non-void function [-Werror=return-type]
+At top level:
+test.c:503:5: error: ‘main’ defined but not used [-Werror=unused-function]
+  503 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+c99706d

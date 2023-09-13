@@ -423,3 +423,9 @@ treemap.c:76:16: error: ‘TreeNode’ has no member named ‘lef’; did you me
       |                left
 Compilation failed
 764ffb7
+Wed 13 Sep 2023 07:45:23 AM UTC: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  15|4
+total_score: 25/70
+edf8222

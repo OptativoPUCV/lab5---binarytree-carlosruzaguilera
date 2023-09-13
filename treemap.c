@@ -50,6 +50,15 @@ TreeMap * createTreeMap(int (*lt) (void* key1, void* key2)) {
 void insertTreeMap(TreeMap * tree, void* key, void * value) {
   TreeNode *parent = NULL;
   TreeNode *current = tree->root;
+  while (current) {
+        parent = current;
+        if (is_equal(tree, key, current->pair->key)) return; 
+        if (tree->lowerthan(ky, current->pair->key)) {
+            current  current->left;
+        } else {
+            current = current->right;
+        }
+    }
 }
 
 TreeNode * minimum(TreeNode * x){

@@ -406,3 +406,9 @@ treemap.c:69:24: error: ‘neNode’ undeclared (first use in this function); di
       |                        newNode
 Compilation failed
 b938d4f
+Wed 13 Sep 2023 07:44:00 AM UTC: 
+ treemap.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+ tests:  13|5
+total_score: 25/70
+68e2004

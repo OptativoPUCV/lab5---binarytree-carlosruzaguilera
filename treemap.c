@@ -96,6 +96,13 @@ void removeNode(TreeMap * tree, TreeNode* node) {
       transplant(tree, node, node->right);
   } else if (node->right == NULL) {
         transplant(tree, node, node->left);
+    } else {
+        TreeNode* y = minimum(node->right);
+        if (y->parent != node) {
+            transplant(tree, y, y->right);
+            y->right = node->right;
+            y->right->parent = y;
+        }
 }
 
 void eraseTreeMap(TreeMap * tree, void* key){
